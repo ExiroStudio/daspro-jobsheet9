@@ -8,9 +8,12 @@ public class ArrayNilai30 {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiAkhir[i] = input.nextInt();
         }
-        for (int i = 0; i < nilaiAkhir.length; i++) {
-            if (nilaiAkhir[i] <= 70) continue; 
-            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " LULUS");
+        int nomor = 1;
+        for (int nilai : nilaiAkhir) {
+            if (nilai <= 70) {
+                System.out.println("Mahasiswa ke-" + nomor + ": " + nilai + " (LULUS)");
+            }
+            nomor++;
         }
         input.close();
     }
