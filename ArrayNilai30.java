@@ -5,13 +5,12 @@ public class ArrayNilai30 {
         int[] nilaiAkhir = new int[10];
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < nilaiAkhir.length; i++) {
-            System.out.println("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
+            System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiAkhir[i] = input.nextInt();
         }
         for (int i = 0; i < nilaiAkhir.length; i++) {
-            String status = (nilaiAkhir[i] > 70) ? "LULUS" : "TIDAK LULUS";
-            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" +
-                    status + ")");
+            if (nilaiAkhir[i] <= 70) continue; 
+            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " LULUS");
         }
         input.close();
     }
