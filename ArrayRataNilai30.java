@@ -5,6 +5,7 @@ public class ArrayRataNilai30 {
         Scanner sc = new Scanner(System.in);
         int[] nilaiMhs = new int[10];
         int total = 0;
+        int lulus = 0;
         double rata2;
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
@@ -19,6 +20,8 @@ public class ArrayRataNilai30 {
         int tertinggi = nilaiMhs[0];
         int terendah = nilaiMhs[0];
         for (int i = 1; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70)
+                lulus++;
             if (nilaiMhs[i] > tertinggi)
                 tertinggi = nilaiMhs[i];
             if (nilaiMhs[i] < terendah)
@@ -26,6 +29,7 @@ public class ArrayRataNilai30 {
         }
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
+        System.out.println("Jumlah lulus: " + lulus);
         String status = (rata2 >= 85 ? "SANGAT BAIK" : rata2 >= 70 ? "BAIK" : "PERLU PENDAMPINGAN");
         System.out.println("Predikat kelas: " + status);
     }
