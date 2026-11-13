@@ -1,8 +1,22 @@
+import java.util.Scanner;
+
 public class SearchNilai30 {
     public static void main(String[] args) {
-        int[] nilai = { 78, 65, 90, 55, 88, 72 };
-        int key = 90;
+        Scanner sc = new Scanner(System.in);
         boolean ditemukan = false;
+        
+        System.out.print("Masukkan jumlah data : ");
+        int[] nilai = new int[sc.nextInt()];
+
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print("Masukkan data ke-" + (i + 1) + " : ");
+            nilai[i] = sc.nextInt();
+        }
+
+        System.out.print("Masukkan nilai yang ingin dicari : ");
+        int key = sc.nextInt();
+        sc.close();
+
         for (int i = 0; i < nilai.length; i++) {
             if (nilai[i] == key) {
                 System.out.println("Nilai " + key + " ditemukan pada indeks ke-" + i);
