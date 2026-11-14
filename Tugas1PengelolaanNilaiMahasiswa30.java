@@ -12,6 +12,9 @@ public class Tugas1PengelolaanNilaiMahasiswa30 {
             }
         } while (mhs <= 0);
         int[] nilaiMhs = new int[mhs];
-        
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            System.out.print(String.format("Masukkan nilai mahasiswa ke-%s : ", (i+1)));
+            nilaiMhs[i] = sc.nextInt();
+        }
     }
 }
