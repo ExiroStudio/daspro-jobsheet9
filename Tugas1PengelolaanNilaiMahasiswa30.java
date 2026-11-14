@@ -12,9 +12,15 @@ public class Tugas1PengelolaanNilaiMahasiswa30 {
             }
         } while (mhs <= 0);
         int[] nilaiMhs = new int[mhs];
-        for (int i = 0; i < nilaiMhs.length; i++) {
+        for (int i = 0; i < nilaiMhs.length;) {
             System.out.print(String.format("Masukkan nilai mahasiswa ke-%s : ", (i+1)));
-            nilaiMhs[i] = sc.nextInt();
+            int nilai = sc.nextInt();
+            if (nilai < 0 || nilai > 100) {
+                System.out.println("Nilai mahasiswa tidak valid, mohon masukkan ulang");
+                continue;
+            }
+            nilaiMhs[i] = nilai;
+            i++;
         }
     }
 }
